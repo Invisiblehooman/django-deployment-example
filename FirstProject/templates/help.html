@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}">
+</head>
+<body>
+<h1><em>Here are the User's Information</em></h1>
+<div>
+<ol>
+    {% for user in users %}
+                <li>User's Info:</li>
+                <ul>
+                    <li>First Name: {{ user.first_name }}</li>
+                    <li>Last Name: {{ user.last_name }}</li>
+                    <li>Email: {{ user.email }}</li>
+                </ul>
+    {% endfor %}
+</ol>
+
+</div>
+
+</body>
+</html>
